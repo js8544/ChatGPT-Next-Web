@@ -79,16 +79,17 @@ export const Azure = {
 };
 
 export const DEFAULT_INPUT_TEMPLATE = `{{input}}`; // input / time / model / lang
-export const DEFAULT_SYSTEM_TEMPLATE = `
-You are ChatGPT, a large language model trained by OpenAI.
-Knowledge cutoff: {{cutoff}}
-Current model: {{model}}
-Current time: {{time}}
-Latex inline: $x^2$ 
-Latex block: $$e=mc^2$$
-`;
+// export const DEFAULT_SYSTEM_TEMPLATE = `
+// You are ChatGPT, a large language model trained by OpenAI.
+// Knowledge cutoff: {{cutoff}}
+// Current model: {{model}}
+// Current time: {{time}}
+// Latex inline: $x^2$
+// Latex block: $$e=mc^2$$
+// `;
+export const DEFAULT_SYSTEM_TEMPLATE = "";
 
-export const SUMMARIZE_MODEL = "gpt-3.5-turbo";
+export const SUMMARIZE_MODEL = "TheBloke/Qwen-14B-Chat-AWQ";
 
 export const KnowledgeCutOffDate: Record<string, string> = {
   default: "2021-09",
@@ -96,61 +97,68 @@ export const KnowledgeCutOffDate: Record<string, string> = {
   "gpt-4-vision-preview": "2023-04",
 };
 
+// export const DEFAULT_MODELS = [
+//   {
+//     name: "gpt-4",
+//     available: true,
+//   },
+//   {
+//     name: "gpt-4-0314",
+//     available: true,
+//   },
+//   {
+//     name: "gpt-4-0613",
+//     available: true,
+//   },
+//   {
+//     name: "gpt-4-32k",
+//     available: true,
+//   },
+//   {
+//     name: "gpt-4-32k-0314",
+//     available: true,
+//   },
+//   {
+//     name: "gpt-4-32k-0613",
+//     available: true,
+//   },
+//   {
+//     name: "gpt-4-1106-preview",
+//     available: true,
+//   },
+//   {
+//     name: "gpt-4-vision-preview",
+//     available: true,
+//   },
+//   {
+//     name: "gpt-3.5-turbo",
+//     available: true,
+//   },
+//   {
+//     name: "gpt-3.5-turbo-0301",
+//     available: true,
+//   },
+//   {
+//     name: "gpt-3.5-turbo-0613",
+//     available: true,
+//   },
+//   {
+//     name: "gpt-3.5-turbo-1106",
+//     available: true,
+//   },
+//   {
+//     name: "gpt-3.5-turbo-16k",
+//     available: true,
+//   },
+//   {
+//     name: "gpt-3.5-turbo-16k-0613",
+//     available: true,
+//   },
+// ] as const;
+
 export const DEFAULT_MODELS = [
   {
-    name: "gpt-4",
-    available: true,
-  },
-  {
-    name: "gpt-4-0314",
-    available: true,
-  },
-  {
-    name: "gpt-4-0613",
-    available: true,
-  },
-  {
-    name: "gpt-4-32k",
-    available: true,
-  },
-  {
-    name: "gpt-4-32k-0314",
-    available: true,
-  },
-  {
-    name: "gpt-4-32k-0613",
-    available: true,
-  },
-  {
-    name: "gpt-4-1106-preview",
-    available: true,
-  },
-  {
-    name: "gpt-4-vision-preview",
-    available: true,
-  },
-  {
-    name: "gpt-3.5-turbo",
-    available: true,
-  },
-  {
-    name: "gpt-3.5-turbo-0301",
-    available: true,
-  },
-  {
-    name: "gpt-3.5-turbo-0613",
-    available: true,
-  },
-  {
-    name: "gpt-3.5-turbo-1106",
-    available: true,
-  },
-  {
-    name: "gpt-3.5-turbo-16k",
-    available: true,
-  },
-  {
-    name: "gpt-3.5-turbo-16k-0613",
+    name: "TheBloke/Qwen-14B-Chat-AWQ",
     available: true,
   },
 ] as const;
