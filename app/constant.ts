@@ -89,7 +89,7 @@ export const DEFAULT_INPUT_TEMPLATE = `{{input}}`; // input / time / model / lan
 // `;
 export const DEFAULT_SYSTEM_TEMPLATE = "";
 
-export const SUMMARIZE_MODEL = "TheBloke/Qwen-14B-Chat-AWQ";
+export const SUMMARIZE_MODEL = "TheBloke/Qwen-7B-Chat-AWQ";
 
 export const KnowledgeCutOffDate: Record<string, string> = {
   default: "2021-09",
@@ -158,7 +158,7 @@ export const KnowledgeCutOffDate: Record<string, string> = {
 
 export const DEFAULT_MODELS = [
   {
-    name: "TheBloke/Qwen-14B-Chat-AWQ",
+    name: "TheBloke/Qwen-7B-Chat-AWQ",
     available: true,
   },
 ] as const;
